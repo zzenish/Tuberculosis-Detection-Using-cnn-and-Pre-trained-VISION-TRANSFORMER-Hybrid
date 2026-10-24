@@ -1,0 +1,21 @@
+# Environments
+venv/
+.venv/
+env/
+.env/
+
+# Datasets and large files
+Datasets/
+data/
+*.csv
+*.json
+
+# Model weights
+*.h5
+*.pt
+*.pth
+*.pkl
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+__pycache__/
