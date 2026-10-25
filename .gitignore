@@ -1,21 +1,47 @@
-# Environments
-venv/
+# Local environments and credentials
 .venv/
+venv/
 env/
-.env/
+.venv-tensorflow/
+.env
+.env.*
 
-# Datasets and large files
-Datasets/
-data/
-*.csv
-*.json
+# Original data and generated preprocessing stages
+/Datasets/
+/FINAL_DATASET/
+/Preprocessing/CLEANED_DATASET/
+/Preprocessing/GRAYSCALE/
+/Preprocessing/RESIZING/
+/Preprocessing/CONTRAST_NORMALIZATION/
+/Preprocessing/CHANNEL_REPLICATION/
+/Preprocessing/INTENSITY_SCALING/
+/Preprocessing/Z_SCORE_STANDARDIZATION/
+/VERIFICATION_REPORT.json
+/PIXEL_WALKTHROUGH.json
 
-# Model weights
+# Trained models, evaluations and run logs (share separately)
+/Training/CNN/
+/Training/ViT/
+/Training/Hybrid/
+*.keras
 *.h5
 *.pt
 *.pth
 *.pkl
+*.log
 
-# Notebook checkpoints
-.ipynb_checkpoints/
+# Historical local backups and personal files
+/About-Project/Code-Archive/
+/About-Project/Training/
+/my_private_notes.md
+/Mid_Term_tuberclosis.pdf
+
+# Python/editor/system caches
 __pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.DS_Store
+*~
+
+# Keep .streamlit/config.toml, source metadata examples and documentation trackable.
