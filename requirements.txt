@@ -1,31 +1,27 @@
-# Complete project dependencies: preprocessing, training, evaluation and Streamlit UI.
-# Recommended Python: 3.11 (the project's tested interpreter).
+# FINAL_PROJECT — one Python 3.11 environment (.venv)
 # Install: python -m pip install -r requirements.txt
-# PyTorch versions omit machine-specific +cu130 suffixes so pip selects a platform wheel.
-# GPU training additionally requires a compatible NVIDIA driver/CUDA-enabled PyTorch build.
+# Covers the active TensorFlow project; archived PyTorch code is not required.
+# Python and the NVIDIA driver must already be installed.
 
-# Arrays, image processing and source metadata
+# TensorFlow/Keras training, pretrained ViT, and Linux CUDA runtime libraries
+# These versions were verified together on this project's RTX 3050 Ti.
+tensorflow[and-cuda]==2.21.0; platform_system == "Linux"
+tensorflow==2.21.0; platform_system != "Linux"
+keras==3.15.1
+keras-hub==0.32.0
+
+# Preprocessing, image arrays, image files and dataset metadata
 numpy==2.4.6
 opencv-python-headless==5.0.0.93
-Pillow==12.3.0
+Pillow==13.0.0
 openpyxl==3.1.5
-et-xmlfile==2.0.0
 
-# Dataset splitting, evaluation and numerical dependencies
+# Splitting, classification metrics and plots
 scikit-learn==1.9.1
-scipy==1.17.1
-joblib==1.6.0
-threadpoolctl==3.7.0
-
-# Matching model/training packages
-torch==2.14.1
-torchvision==0.29.1
-timm==1.0.30
-safetensors==0.8.0
-huggingface-hub==2.2.0
-
-# User interface and plotting
-streamlit==1.66.1
 matplotlib==3.11.2
 
-# Other dependencies are installed automatically by pip.
+# Streamlit interface
+streamlit==1.66.1
+
+# Dependencies such as scipy, pandas, h5py and tensorflow-text are installed by pip.
+# After installation on this laptop: bash Training/configure_gpu.sh
