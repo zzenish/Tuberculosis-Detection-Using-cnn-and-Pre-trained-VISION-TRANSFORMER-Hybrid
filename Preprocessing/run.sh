@@ -30,3 +30,4 @@ echo "Finished 08_prepare_final_dataset.py"
 
 python3 09_verify_preprocessing.py
 echo "Preprocessing complete!"
+echo "Generating Preview Image"
