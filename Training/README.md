@@ -1,12 +1,14 @@
 # Training
 
+For environment setup and transfer instructions, see [RUN_PROJECT.md](../About-Project/RUN_PROJECT.md).
+
 Run all three models from this folder:
 
 ```bash
 bash train.sh
 ```
 
-The script uses the project's `.venv`. Install the root `requirements.txt` there first if needed. It trains CNN, then ViT, then Hybrid. Each model trains with validation after every epoch, restores its best validation checkpoint, and finally evaluates the separate Shenzhen test set. Training has not been started by this cleanup.
+The script uses the project's `.venv`. Install the root `requirements.txt` there first if needed. It trains CNN, then ViT, then Hybrid. Each model trains with validation after every epoch, restores its best validation checkpoint, and finally evaluates the separate Shenzhen test set.
 
 ## Files you need
 
